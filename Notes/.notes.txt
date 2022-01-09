@@ -1,0 +1,15 @@
+// PACKAGES/SETUPS TO INSTALL BEFOREHAND
+- npm init -y
+- npm install nodemon
+- npm install express
+- npm install mongoose
+- npm install dotenv
+
+
+
+Working with POSTMAN: 
+
+
+
+
+NOTEABLE ERRORS (and how I fixed them):
