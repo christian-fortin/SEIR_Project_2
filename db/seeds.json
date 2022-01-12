@@ -1,22 +1,16 @@
 [
-    {
-       "title": "Microsoft",
-       "url": "https://microsoft.com"
-    },
-    {
-       "title": "reddit",
-       "url": "https://reddit.com" 
-    },
-    {
-       "title": "Google",
-       "url": "https://google.com"
-    },
-    {
-       "title": "Know your meme",
-       "url": "https://knowyourmeme.com/"
-    },
-    {
-       "title": "Hacker news",
-       "url": "https://news.ycombinator.com"
-    }
-  ]
+   {
+     "name": "Orchid",
+     "description": "Flower/Parasite",
+     "img": "###",
+     "price": 40,
+     "qty": 3
+   },
+   {
+     "name": "Venus Fly Trap",
+     "description": "Flower/Parasite",
+     "img": "###",
+     "price": 50,
+     "qty": 3
+   }
+ ]
