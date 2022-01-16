@@ -5,8 +5,9 @@ const Chunks = require("../models/chunks");
 // The home route
 router.get("/chunks", (req, res) => {
   Chunks.find({}, (err, items) => {
-    console.log(items);
-    res.render("index", { items: items });
+    res.render("index", { 
+      items: items, 
+    /*username: req.session.username */});
   });
 });
 

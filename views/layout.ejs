@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link type="text/css" rel="stylesheet" href="/css/normalize.css" />
+    <title>CHUNKS</title>
+</head>
+<body>
+<div id="tittle_and_NavBar">
+    <div id="chunks-title-box">
+        <h1 id="chunks-title">CHUNKS</h1>
+    </div>
+    
+    <nav id="navBar-nav">
+        <ul id="navBar-nav">
+           
+            <li> <a href="/chunks"  id="navBar-Item">Home</a></li>
+            <li> <a href="/chunks/new"  id="navBar-Item">Create a New Item</a></li>
+            <% if(!loggedIn) { %>
+            <li> <a href="/sessions/login"  id="navBar-Item">Login</a></li>
+            <li><a href="/sessions/register"  id="navBar-Item">Register</a></li>
+            <% } else { %>
+            <li><a href="/sessions/logout"  id="navBar-Item">Logout</a></li>
+            <% } %>
+        </ul>
+        
+        
+    </nav>
+</div>  
+    <%= username %>
+    <%-body%>
+</body>
+</html>
