@@ -1,12 +1,12 @@
 const mongoose = require('../db/connection')
 
 const chunksSchema = new mongoose.Schema({
-    name: {type: String, required: true},
+    title: {type: String, required: true},
+    prompt: {type: String, required: true},
+    zipFile: { type: String, required: true},
     description: {type: String, required: true},
-    img: {type: String, required: true},
-    price: {type: Number, required: true, min: 0},
-    qty: {type: Number, required: true, min: 0}
-})
+    videoFile: {type: String, required: true},
+    })
 
 const Chunks = mongoose.model('Chunks', chunksSchema)
 

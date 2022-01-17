@@ -1,16 +1,16 @@
 [
    {
-     "name": "Orchid",
-     "description": "Flower/Parasite",
-     "img": "###",
-     "price": 40,
-     "qty": 3
+     "title": "FizzBuzz",
+     "prompt": "Get every 5 and 3 to console.log from 1-100",
+     "zipFile": "XXX",
+     "description": "Use this methode to complete the prompt.....fdsafsdafasd",
+     "videoFile": "fasdfasdfasd"
    },
    {
-     "name": "Venus Fly Trap",
-     "description": "Flower/Parasite",
-     "img": "###",
-     "price": 50,
-     "qty": 3
+    "title": "Get the Odds",
+    "prompt": "Get every odd number to console.log from 1-100",
+    "zipFile": "XXX",
+    "description": "Use this methode to complete the prompt.....fdsafsdafasd",
+    "videoFile": "fasdfasdfasd"
    }
  ]

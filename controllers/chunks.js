@@ -11,8 +11,8 @@ router.get("/chunks", (req, res) => {
   });
 });
 
-router.get("/chunks/new", (req, res) => {
-  res.render("new");
+router.get('/chunks/new', (req, res) => {
+  res.render('new');
 });
 
 router.get("/chunks/:id", (req, res) => {
@@ -51,24 +51,6 @@ router.get("/chunks/:id/edit", (req, res) => {
   });
 });
 
-router.put("/chunks/:id/buy", (req, res) => {
-  Chunks.findById(req.params.id, (err, item) => {
-    if (item.qty > 0) {
-      item.qty--;
-      Chunks.findByIdAndUpdate(
-        req.params.id,
-        item,
-        { new: true },
-        (err, updatedModel) => {
-          console.log(updatedModel);
-          res.render("show", { item: updatedModel });
-        }
-      );
-    } else {
-        res.render('show', { item: item })
-    }
-  });
 
-});
 
 module.exports = router;

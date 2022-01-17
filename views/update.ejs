@@ -1,23 +1,52 @@
 
-    <h1>Edit Item</h1>
-<form action="/chunks/<%= item.id %>?_method=PUT" method='POST'>
 
-    <label for="name">Name</label>
-    <input type="text" name="name" id='name' value="<%= item.name %>">
+<div id="edit-item-title">
+  <h1>Edit Item</h1>
+</div>
 
-    <label for="Description">Description</label>
-    <input type="text" name="description" id='description' value="<%= item.description %>">
 
-    <label for="img">Img</label>
-    <input type="text" name="img" id='img' value="<%= item.img %>">
+  <form action="/chunks/<%= item.id %>?_method=PUT" method="POST">
 
-    <label for="price">Price</label>
-    <input type="number" name="price" id='price' value="<%= item.price %>">
 
-    <label for="qty">Quantity</label>
-    <input type="number" name="qty" id='qty' value="<%= item.qty %>">
+<br>
+<div id="edit-title-div">
+    <label for="title">Title:</label>
+    <textarea type="text" name="title" id="title" value="<%=item.name%>"></textarea>
+</div>
 
-    <input type="submit" value='Edit the Item'>
+<br>
 
-</form>
 
+
+
+    <label for="prompt">Prompt:</label>
+    <textarea type="text" name="prompt" id="prompt" style="height: 4rem; width: 15rem; margin-top: 1em;" value="<%=item.prompt%>"></textarea>
+<br>
+
+
+
+
+
+    <label for="zipFile">Zip File:</label>
+    <textarea type="text" name="zipFile" id="zipFile" style="margin-top: 1em;" value="<%=item.zipFile%>"></textarea>
+<br>
+
+
+
+
+
+    <label for="description">Description:</label>
+    <textarea type="text" name="description" id="description"  style="height: 4rem; width: 15rem; margin-top: 1em;" value="<%=item.description%>"></textarea>
+<br>
+
+
+
+    <label for="VideoFile">Video File: </label>
+    <textarea type="text" name="videoFile" id="videoFile" style="margin-top: 1em;" value="<%=item.videoFile%>"></textarea>
+<br>
+
+
+
+    <input type="submit" value="Submit the Edit" style="margin-top: 1em;" />
+  </form>
+</div>

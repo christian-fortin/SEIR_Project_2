@@ -30,7 +30,10 @@
         
     </nav>
 </div>  
-    <%= username %>
+
+    <% if (username) { %>
+    <p>Welcome, <%= username %> </p>
+    <% } %>
     <%-body%>
 </body>
 </html>

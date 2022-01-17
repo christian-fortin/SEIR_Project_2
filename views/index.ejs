@@ -1,25 +1,50 @@
-
-
- 
-    <% items.forEach( (item, index) =>{ %>
-    <div class="itemContainer">
-
-   
-        <h1>
-            <a href="/chunks/<%= item.id %>">
-                <p>Name: <%= item.name %></p> 
-                <p>Description: <%= item.description %></p> 
-                <p>Img: <%= item.img %></p> 
-                <p>Price: <%= item.price %></p> 
-                <p>Quantity: <%= item.qty %></p> 
-            </a>
-        </h1>
-        <form action='/chunks/<%= item.id %>?_method=DELETE' method="POST">
-            <input type="submit" value="DELETE" />
-        </form>
-        <a href="/chunks/<%= item.id %>/edit">Edit Me</a>
-        <a href="/chunks"></a>
-        <%  }) %>
+<% items.forEach( (item, index) =>{ %>
+<div class="itemContainer" style="text-decoration: none;">
+  <a href="/chunks/<%= item.id %>" id="items-a-container">
+    <div>
+      <h1 class="item-title" style="color: black;">Title: <%= item.title %></h1>
     </div>
 
+    <div id="prompt-div" >
+      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Prompt:</p>
+      <p class="item-below-prompt" style="color: black;"><%= item.prompt %></p>
+    </div>
 
+<br>
+
+    <div id="zipFile-div">
+      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Zip File:</p>
+      <p class="item-below-zipFile"><%= item.zipFile %></p>
+    </div>
+
+<br>
+
+
+    <div id="description-div">
+      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Description: </p>
+      <p class="item-below-description"><%= item.description %></p>
+    </div>
+
+    <br>
+
+    <div id="videoFile-div">
+      <p class="item" style="font-size: larger; font-weight: bold; color: black;">VideoFile:</p>
+      <p class="item-below-videoFile"><%= item.videoFile %></p>
+    </div>
+  </a>
+
+
+
+<div id="edit-and-delete">
+    <div id="delete-button" > 
+        <form action="/chunks/<%= item.id %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE ENTRY" />
+      </form>
+    </div>
+ <div id="edit-div">
+    <a href="/chunks/<%= item.id %>/edit">EDIT ENTRY</a>
+ </div>
+  
+</div>
+  <% }) %>
+</div>
