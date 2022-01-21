@@ -11,7 +11,8 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 // const PORT = 6000
-const PORT = process.env.PORT
+app.set('port', process.env.PORT || 3000)
+// const PORT = process.env.PORT
 const SESSION_SECRET = process.env.SESSION_SECRET
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
@@ -50,6 +51,18 @@ app.use((req, res, next) => {
     next()
 })
 
+// const authRequired = (req, res, next) => {
+//     if (req.session.loggedIn) {
+//         // if the user is logged in, resolve the route
+//         next()
+//     } else {
+//         // otherwise redirect them to the log in page
+//         res.redirect('/session/login')
+//     }
+// }
+
+
+
 
 // setting up controller
 app.use('/', chunksController)
@@ -64,4 +77,4 @@ app.use('/sessions', sessionController)
 // app.get('/getSessionInfo', (req, res) => {
 //     res.send(req.session.data)
 // })
-app.listen(PORT, ()=> console.log(`Port: ${PORT}`))
+app.listen(app.get('port'), ()=> console.log(`Port: ${app.get('port')}`))

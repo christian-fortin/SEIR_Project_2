@@ -50,7 +50,7 @@ router.post("/login", async (req, res, next) => {
         userToLogin.password
       );
 
-      res.redirect("/chunks");
+      // res.redirect("/chunks");
       if (validPassword) {
         req.session.username = userToLogin.username;
         req.session.loggedIn = true;

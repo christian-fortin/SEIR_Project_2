@@ -87,11 +87,12 @@ ul {
   padding: 10px;
 }
 
-.item-below-prompt {
+.item-below {
   display: flex;
   justify-content: center;
   margin-top: 2px;
   text-decoration: none;
+  color: black;
 }
 
 
@@ -125,10 +126,22 @@ ul {
 
 #delete-button {
   margin-right: 10px;
+  background-color: black;
+  color: whitesmoke;
 }
 
 #edit-div {
   margin-left: 10px;
+}
+
+.edit-text {
+  text-decoration: underline wavy yellowgreen;
+  color: black;
+}
+
+.delete-button-text {
+  background-color: black;
+  color: whitesmoke;
 }
   /*//
 ///////////////////////////////////////////////////////////////////////////////////////
