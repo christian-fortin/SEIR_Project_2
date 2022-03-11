@@ -16,7 +16,7 @@ app.set('port', process.env.PORT || 3000)
 const SESSION_SECRET = process.env.SESSION_SECRET
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
-const chunksController = require('./controllers/chunks')
+const mealController = require('./controllers/meal')
 const sessionController = require('./controllers/sessions')
 const session = require('express-session')
 
@@ -65,7 +65,7 @@ app.use((req, res, next) => {
 
 
 // setting up controller
-app.use('/', chunksController)
+app.use('/', mealController)
 app.use('/sessions', sessionController)
 
 // app.get('/setCookie/:data', (req, res) => {

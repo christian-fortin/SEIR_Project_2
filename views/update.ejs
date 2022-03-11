@@ -5,13 +5,13 @@
 </div>
 
 
-  <form action="/chunks/<%= item.id %>?_method=PUT" method="POST">
+  <form action="/meal/<%= item.id %>?_method=PUT" method="POST">
 
 
 <br>
 <div id="edit-title-div">
-    <label for="title">Title:</label>
-    <textarea type="text" name="title" id="title" value="<%=item.name%>"></textarea>
+    <label for="dish">Dish:</label>
+    <textarea type="text" name="dish" id="dish" value="<%=item.dish%>"></textarea>
 </div>
 
 <br>
@@ -19,32 +19,25 @@
 
 
 
-    <label for="prompt">Prompt:</label>
-    <textarea type="text" name="prompt" id="prompt" style="height: 4rem; width: 15rem; margin-top: 1em;" value="<%=item.prompt%>"></textarea>
+    <label for="ingredients">Ingredients:</label>
+    <textarea type="text" name="ingredients" id="ingredients" style="height: 4rem; width: 15rem; margin-top: 1em;" value="<%=item.ingredients%>"></textarea>
 <br>
 
 
 
 
 
-    <label for="zipFile">Zip File:</label>
-    <textarea type="text" name="zipFile" id="zipFile" style="margin-top: 1em;" value="<%=item.zipFile%>"></textarea>
+    <label for="recepie">Recepie:</label>
+    <textarea type="text" name="recepie" id="recepie" style="margin-top: 1em;" value="<%=item.recepie%>"></textarea>
 <br>
 
 
 
 
 
-    <label for="description">Description:</label>
-    <textarea type="text" name="description" id="description"  style="height: 4rem; width: 15rem; margin-top: 1em;" value="<%=item.description%>"></textarea>
+    <label for="image">Image:</label>
+    <textarea type="text" name="image" id="image"  style="height: 4rem; width: 15rem; margin-top: 1em;" value="<%=item.image%>"></textarea>
 <br>
-
-
-
-    <label for="VideoFile">Video File: </label>
-    <textarea type="text" name="videoFile" id="videoFile" style="margin-top: 1em;" value="<%=item.videoFile%>"></textarea>
-<br>
-
 
 
     <input type="submit" value="Submit the Edit" style="margin-top: 1em;" />

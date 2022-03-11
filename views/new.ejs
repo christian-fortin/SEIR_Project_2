@@ -1,41 +1,40 @@
 <body>
-  
   <div id="new-item-title">
     <h1>New Item</h1>
   </div>
 
   <div id="new-item-container">
-
-    <form action="/chunks/new" method="POST">
-
+    <form action="/meal/new" method="POST">
       <div id="new-title-div">
-      <label for="title">Title</label>
-      <input type="text" name="title" id="title" />
+        <label for="dish">Dish</label>
+        <input type="text" name="dish" id="dish" />
       </div>
 
-      <br>
+      <br/>
 
-<div>
-  <label for="prompt">Prompt</label>
-  <textarea type="text" name="prompt" id="prompt" style="height: 4rem; width: 15rem; margin-top: 1em;" ></textarea>
-</div>
-      
-<br>
-      <label for="zipFile">Zip File</label>
-      <textarea type="text" name="zipFile" id="zipFile" style="margin-top: 1em;" ></textarea>
+      <div>
+        <label for="ingredients">ingredients</label>
+        <textarea
+          type="text"
+          name="ingredients"
+          id="ingredients"
+          style="height: 4rem; width: 15rem; margin-top: 1em"
+        ></textarea>
+      </div>
+      <br/>
 
-      <br>
+      <label for="recepie">Recepie</label>
+      <textarea
+        type="text"
+        name="recepie"
+        id="recepie"
+        style="height: 4rem; width: 15rem; margin-top: 1em"
+      ></textarea>
 
-      <label for="description">Description</label>
-      <textarea type="text" name="description" id="description" style="height: 4rem; width: 15rem; margin-top: 1em;" ></textarea>
+      <br/>
 
-      <br>
-
-      <label for="VideoFile">Video File</label>
-      <textarea type="text" name="videoFile" id="videoFile" style="margin-top: 1em;"></textarea>
-
-      <br>
-      <input type="submit" value="A New Item"  style="margin-top: 1em;"/>
+      <br />
+      <input type="submit" value="A New Item" style="margin-top: 1em" />
     </form>
   </div>
 </body>

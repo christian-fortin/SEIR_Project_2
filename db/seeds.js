@@ -1,10 +1,10 @@
 const mongoose = require('./connection')
-const Chunks = require('../models/chunks')
-const chunksSeeds = require('./seeds.json')
+const Meal = require('../models/meal')
+const mealSeeds = require('./seeds.json')
 
-Chunks.deleteMany({})
+Meal.deleteMany({})
 .then(()=>{
-    return Chunks.insertMany(chunksSeeds)
+    return Meal.insertMany(mealSeeds)
 })
 .then(data => console.log(data))
 .catch(err=>console.log(err))

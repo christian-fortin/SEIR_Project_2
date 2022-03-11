@@ -1,48 +1,39 @@
 <% items.forEach( (item, index) =>{ console.log(item)  %>
 
 <div class="itemContainer" style="text-decoration: none;">
-  <a href="/chunks/<%= item.id %>" id="items-a-container">
+  <a href="/meal/<%= item.id %>" id="items-a-container">
     <div>
-      <h1 class="item-title" style="color: black;">Title: <%= item.title %></h1>
+      <h1 class="item-title" style="color: black;">Dish: <%= item.dish %></h1>
     </div>
 
     <div id="prompt-div" >
-      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Prompt:</p>
-      <p class="item-below" style="color: black;"><%= item.prompt %></p>
+      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Ingredients:</p>
+      <p class="item-below" style="color: black;"><%= item.ingredients %></p>
     </div>
 
 <br>
 
     <div id="zipFile-div">
-      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Zip File:</p>
-      <p class="item-below"><%= item.zipFile %></p>
+      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Recepie:</p>
+      <p class="item-below"><%= item.recepie %></p>
     </div>
 
 <br>
 
     <div id="description-div">
-      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Description: </p>
-      <p class="item-below"><%= item.description %></p>
+      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Image: </p>
+      <p class="item-below"><%= item.image %></p>
     </div>
-
-    <br>
-
-    <div id="videoFile-div">
-      <p class="item" style="font-size: larger; font-weight: bold; color: black;">VideoFile:</p>
-      <p class="item-below"><%= item.videoFile %></p>
-    </div>
-  </a>
-
 
 
 <div id="edit-and-delete">
     <div id="delete-button" > 
-        <form id="delete-button-text" action="/chunks/<%= item.id %>?_method=DELETE" method="POST" >
+        <form id="delete-button-text" action="/meal/<%= item.id %>?_method=DELETE" method="POST" >
         <input type="submit" value="DELETE ENTRY" />
       </form>
     </div>
  <div id="edit-div">
-    <a href="/chunks/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
+    <a href="/meal/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
  </div>
   
 </div>

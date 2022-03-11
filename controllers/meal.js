@@ -1,40 +1,40 @@
 const express = require("express");
 const router = express.Router();
-const Chunks = require("../models/chunks");
+const Meal = require("../models/meal");
 
 // The home route
-router.get("/chunks", (req, res) => {
-  Chunks.find({}, (err, items) => {
+router.get("/meal", (req, res) => {
+  Meal.find({}, (err, items) => {
     res.render("index", { 
       items: items, 
     /*username: req.session.username */});
   });
 });
 
-router.get('/chunks/new', (req, res) => {
+router.get('/meal/new', (req, res) => {
   res.render('new');
 });
 
-router.get("/chunks/:id", (req, res) => {
-  Chunks.findById(req.params.id, (err, item) => {
+router.get("/meal/:id", (req, res) => {
+  Meal.findById(req.params.id, (err, item) => {
     res.render("show", { item: item });
   });
 });
 
-router.post("/chunks/new", (req, res) => {
-  Chunks.create(req.body, (err, createditem) => {
-    res.redirect("/chunks");
+router.post("/meal/new", (req, res) => {
+  Meal.create(req.body, (err, createditem) => {
+    res.redirect("/meal");
   });
 });
 
-router.delete("/chunks/:id", (req, res) => {
-  Chunks.findByIdAndRemove(req.params.id, (err, deletedItem) => {
-    res.redirect("/chunks");
+router.delete("/meal/:id", (req, res) => {
+  Meal.findByIdAndRemove(req.params.id, (err, deletedItem) => {
+    res.redirect("/meal");
   });
 });
 
-router.put("/chunks/:id", (req, res) => {
-  Chunks.findByIdAndUpdate(
+router.put("/meal/:id", (req, res) => {
+  Meal.findByIdAndUpdate(
     req.params.id,
     req.body,
     { new: true },
@@ -45,8 +45,8 @@ router.put("/chunks/:id", (req, res) => {
   );
 });
 
-router.get("/chunks/:id/edit", (req, res) => {
-  Chunks.findById(req.params.id, (err, item) => {
+router.get("/meal/:id/edit", (req, res) => {
+  Meal.findById(req.params.id, (err, item) => {
     res.render("update", { item });
   });
 });
