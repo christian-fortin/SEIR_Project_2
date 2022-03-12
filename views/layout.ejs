@@ -6,34 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link type="text/css" rel="stylesheet" href="/css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Mono&display=swap" rel="stylesheet">
     <title>MyFoodBlog</title>
 </head>
 <body>
-<div id="tittle_and_NavBar">
-    <div id="meal-title-box">
-        <h1 id="meal-title">MyFoodBlog</h1>
-    </div>
-    
-    <nav id="navBar-nav">
-        <ul id="navBar-nav">
-           
-            <li> <a href="/meal"  id="navBar-Item">Home</a></li>
-            <li> <a href="/meal/new"  id="navBar-Item">Create a New Item</a></li>
-            <% if(!loggedIn) { %>
-            <li> <a href="/sessions/login"  id="navBar-Item">Login</a></li>
-            <li><a href="/sessions/register"  id="navBar-Item">Register</a></li>
-            <% } else { %>
-            <li><a href="/sessions/logout"  id="navBar-Item">Logout</a></li>
-            <% } %>
-        </ul>
-        
-        
-    </nav>
-</div>  
 
+    <nav class="navMenu">
+        <div class="nav-container">
+        <div class="title"><a href="###"></a>MyFoodBlog</div>
+        <div class="navBar-items">
+            <a href="/meal" class="nav-item">Home</a>
+            <a href="/meal/new" class="nav-item">Create a New Item</a>
+            <% if(!loggedIn) { %>
+            <a href="/sessions/login" class="nav-item">Login</a>
+            <a href="/sessions/register" class="nav-item">Register</a>
+            <% } else { %>
+            <a href="/sessions/logout" class="nav-item">Logout</a>
+            <% } %>
     <% if (username) { %>
     <p>Welcome, <%= username %> </p>
     <% } %>
+    </div>
+</div>
+    </nav>
     <%-body%>
 </body>
 </html>
+
+
+
+
+
+<!--         
+           <li>
+               <div id="meal-title-box">
+                    <h1 id="meal-title">MyFoodBlog</h1>
+                </div>
+            </li> -->

@@ -1,26 +1,23 @@
 <% items.forEach( (item, index) =>{ console.log(item)  %>
-
 <div class="itemContainer" style="text-decoration: none;">
   <a href="/meal/<%= item.id %>" id="items-a-container">
     <div>
-      <h1 class="item-title" style="color: black;">Dish: <%= item.dish %></h1>
+      <h1 class="item-dish" style="color: black;">Dish: <%= item.dish %></h1>
     </div>
 
-    <div id="prompt-div" >
+    <div id="ingredients-div" >
       <p class="item" style="font-size: larger; font-weight: bold; color: black;">Ingredients:</p>
       <p class="item-below" style="color: black;"><%= item.ingredients %></p>
     </div>
 
-<br>
 
-    <div id="zipFile-div">
+    <div id="recepie-div">
       <p class="item" style="font-size: larger; font-weight: bold; color: black;">Recepie:</p>
       <p class="item-below"><%= item.recepie %></p>
     </div>
 
-<br>
 
-    <div id="description-div">
+    <div id="image-div">
       <p class="item" style="font-size: larger; font-weight: bold; color: black;">Image: </p>
       <p class="item-below"><%= item.image %></p>
     </div>
