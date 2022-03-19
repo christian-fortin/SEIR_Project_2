@@ -19,12 +19,34 @@ const expressEjsLayout = require('express-ejs-layouts')
 const mealController = require('./controllers/meal')
 const sessionController = require('./controllers/sessions')
 const session = require('express-session')
+app.use(expressEjsLayout)
+app.set('view engine', 'ejs')
+
+// const exphbs = require("express-handlebars");
+// app.engine("handlebars", exphbs.engine());
+// app.set("view engine", "handlebars");
 
 
-
-app.use(express.static('public'))
+app.use(express.static('public/'))
 app.use(methodOverride('_method'));
 
+
+
+
+const multer = require("multer");
+
+let Storage = multer.diskStorage({
+  destination: function (req, file, callback) {
+    callback(null, "./public/images");
+  },
+  filename: function (req, file, callback) {
+    callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
+  },
+});
+
+let upload = multer({
+  storage: Storage,
+}).single("image"); //Field name and max count
 
 
 const routeHit = (req,res,next) =>{
@@ -35,8 +57,6 @@ app.use(routeHit)
 
 app.use(express.urlencoded({extended:false}));
 
-app.use(expressEjsLayout)
-app.set('view engine', 'ejs')
 
 // Session middleware
 app.use(session({

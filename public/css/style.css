@@ -1,7 +1,16 @@
 
 *{
-  text-decoration: none;
   margin: 0;
+  cursor: default;
+}
+
+textarea {
+  resize: none;
+  height: 06em;
+  width: 20rem;
+  word-break: break-all;
+  border-radius: 10px;
+  border: 2px black solid;
 }
 /*// TITLE AND NAV BAR
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -13,6 +22,7 @@
   width: 100%;
   height: 3rem;
   background: black;
+  text-decoration: none;
 }
 
 .navBar-items{
@@ -31,6 +41,7 @@
   height: 100%;
   padding: 0 2rem 0 2rem;
   font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
 }
 
 .nav-item:hover{
@@ -44,6 +55,7 @@
   color: white;
   font-size: 30px;
   font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
 }
 .title:hover{
 color: yellow;
@@ -56,6 +68,34 @@ cursor: pointer;
   margin-left: 3rem;
   width: 100%;
   height: 100%;
+}
+
+
+
+.create{
+  display: none;
+}
+
+
+@media screen and (max-width: 1400px) {
+  .create{
+    display: contents;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    height: 100%;
+    padding: 0 2rem 0 2rem;
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+  }
+  .create:hover{
+    background-color: grey;
+  }
+  .createANewItem{
+    display: none;
+  }
+
+ 
 }
 
   /*//
@@ -75,122 +115,156 @@ cursor: pointer;
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
 
-.itemContainer{
+.itemsContainer{
   display: flex;
+  flex-wrap: wrap;
   margin: 20px;
+  height: 100vh;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .item-title {
+.item-container{
   display: flex;
-  justify-content: center;
-  text-decoration: none;
+  height: 35rem;
+  width: 25rem;
+  padding: 0 1rem 1rem 1rem;
+  margin: 0 2rem 0 2rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
 }
 
-#items-a-container {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
+@media screen and (max-width: 1000px) {
+  .item-container{
+    display: flex;
+    height: 35rem;
+    width: 25rem;
+    padding: 0 1rem 1rem 1rem;
+    margin: 4rem 2rem 0 2rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+  }
+  .itemsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+  }
 }
+/* mediaquery to make margin on top 3rem after 800px  */
 
-.item {
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-  margin-bottom: 4px; 
-  text-decoration: none;
-}
-
-#prompt-div {
-  margin: auto;
-  width: 50%;
-  border: 3px solid black;
-  padding: 10px;
-}
-
-.item-below {
-  display: flex;
-  justify-content: center;
-  margin-top: 2px;
-  text-decoration: none;
-  color: black;
-}
-
-
-#zipFile-div {
-  margin: auto;
-  width: 50%;
-  border: 3px solid black;
-  padding: 10px;
-}
-
-#description-div {
-  margin: auto;
-  width: 50%;
-  border: 3px solid black;
-  padding: 10px;
-}
-
-#videoFile-div {
-  margin: auto;
-  width: 50%;
-  border: 3px solid black;
-  padding: 10px;
-}
-
-
-#edit-and-delete {
-  display: flex;
-  justify-content: center ;
-  margin: 5px;
-}
-
-#delete-button {
-  margin-right: 10px;
-  background-color: black;
-  color: whitesmoke;
-}
-
-#edit-div {
-  margin-left: 10px;
-}
-
-.edit-text {
-  text-decoration: underline wavy yellowgreen;
-  color: black;
-}
-
-.delete-button-text {
-  background-color: black;
-  color: whitesmoke;
+/* .inner-item-container{
+  border: 1px solid red;
 } */
-  /*//
+
+.dish-header{
+  color: grey;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: grey underline;
+}
+.dish-header:hover{
+  color: black;
+}
+
+.ingredients-title{
+  padding: .5rem 0 0 0;
+  font-family: 'Roboto Mono', monospace;
+  color: grey;
+  text-decoration: grey underline 3px;
+}
+
+.link_to_items{
+  font-family: 'Roboto Mono', monospace;
+  color: grey;
+  text-decoration: none;
+}
+.link_to_items:hover{
+  color: black;
+}
+
+
+.recepie-title{
+  padding: .5rem 0 0 0;
+  font-family: 'Roboto Mono', monospace;
+  color: grey;
+  text-decoration: grey underline 3px;
+}
+
+.recepie-p{
+  font-family: 'Roboto Mono', monospace;
+  color: grey;
+}
+.recepie-p:hover{
+  color: black;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+/*// EDIT AND DELETE BUTTONS ON SHOW PAGE
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
 
+.edit-and-delete{
+  display: flex;
+  padding: 2rem 0 0 0;
+  justify-content: center;
+}
+
+.delete-button{
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.delete-button-text{
+border: none;
+font-family: 'Roboto Mono', monospace;
+color: grey;
+text-decoration: grey underline 2.5px;
+margin: 0 0 0 1rem;
+}
+
+.delete-input{
+  background-color: white;
+  border: none;
+  font-family: 'Roboto Mono', monospace;
+  color: grey;
+  text-decoration: grey underline 2.5px;
+  margin: 0 0 0 1rem;
+  font-size: 20px;
+  /* color: blue; */
+}
+
+.delete-input:hover{
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: grey underline 2.5px;
+}
+
+.edit-text{
+  font-family: 'Roboto Mono', monospace;
+  color: grey;
+  text-decoration: grey underline 2.5px;
+  margin: 0 0 0 1rem;
+  font-size: 20px;
+}
+.edit-text:hover{
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: grey underline 2.5px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////// */
 
 
+
+
+
+/* =================================== EDIT PAGE =================================== */
 
 
 /*// EDIT PAGE
@@ -201,6 +275,9 @@ cursor: pointer;
 #edit-item-title {
   display: flex;
   justify-content: center;
+  color: grey;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: grey underline;
 }
 
 #edit-item-container {
@@ -208,10 +285,20 @@ cursor: pointer;
   justify-content: center;
 }
 
+.form-edit_container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
-
-
-
+.editLabel{
+  margin: 2rem 0 .5rem 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: grey;
+  text-decoration: grey underline 2.5px;
+}
 
 
 /*//

@@ -1,38 +1,58 @@
-<% items.forEach( (item, index) =>{ console.log(item)  %>
-<div class="itemContainer" style="text-decoration: none;">
-  <a href="/meal/<%= item.id %>" id="items-a-container">
-    <div>
-      <h1 class="item-dish" style="color: black;">Dish: <%= item.dish %></h1>
-    </div>
+<div class="itemsContainer" style="text-decoration: none;">
+    <% items.forEach( (item, index) =>{ console.log(item)  %>
 
-    <div id="ingredients-div" >
-      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Ingredients:</p>
-      <p class="item-below" style="color: black;"><%= item.ingredients %></p>
-    </div>
+        
+            <div class="item-container">
+            <div class="inner-item-container">
+                <div>
+                    <a href="/meal/<%= item.id %>" class="items-a-container">
+                    <h1 class="dish-header">Dish:
+                        <%= item.dish %>
+                    </h1>
+                </a>
+                </div>
+                <div id="ingredients-div">
+                    <h2 class="ingredients-title">Ingredients:</h2>
+                    <a href=""></a>
+                    <p class="ingredients-p">
+                        <a href="/meal/<%= item.id %>" class="link_to_items">
+                        <%= item.ingredients %>
+                    </p>
+                </a>
+                </div>
 
 
-    <div id="recepie-div">
-      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Recepie:</p>
-      <p class="item-below"><%= item.recepie %></p>
-    </div>
+                <div id="recepie-div">
+                    <h2 class="recepie-title">Recepie:</h2>
+                    <a href="/meal/<%= item.id %>" class="link_to_items">
+                    <p class="recepie-p">
+                        <%= item.recepie %>
+                    </p>
+                </a>
+                </div>
 
 
-    <div id="image-div">
-      <p class="item" style="font-size: larger; font-weight: bold; color: black;">Image: </p>
-      <p class="item-below"><%= item.image %></p>
-    </div>
+                <!-- <div id="image-div">
+                    <p class="item" style="font-size: larger; font-weight: bold; color: black;">Image: </p>
+                    <p class="item-below">
+                        <%= item.image %>
+                    </p>
+                </div> -->
 
 
-<div id="edit-and-delete">
-    <div id="delete-button" > 
-        <form id="delete-button-text" action="/meal/<%= item.id %>?_method=DELETE" method="POST" >
-        <input type="submit" value="DELETE ENTRY" />
-      </form>
-    </div>
- <div id="edit-div">
-    <a href="/meal/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
- </div>
-  
-</div>
-  <% }) %>
+                <div class="edit-and-delete">
+                    <div class="delete-button">
+                        <form class="delete-button-text" action="/meal/<%= item.id %>?_method=DELETE" method="POST">
+                            <input  class="delete-input" type="submit" value="DELETE ENTRY" />
+                        </form>
+                    </div>
+                    <div id="edit-div">
+                        <a href="/meal/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+            <% }) %>
+
 </div>

@@ -5,41 +5,54 @@
 </div>
 
 
-  <form action="/meal/<%= item.id %>?_method=PUT" method="POST">
-
-
-<br>
+  <form action="/meal/<%= item.id %>?_method=PUT" method="POST" class="form-edit_container">
+    <label for="dish" class="editLabel">Dish:</label>
 <div id="edit-title-div">
-    <label for="dish">Dish:</label>
+    
     <textarea type="text" name="dish" id="dish" value="<%=item.dish%>"></textarea>
 </div>
 
-<br>
 
 
+<label for="ingredients" class="editLabel">Ingredients:</label>
+<div id="edit-ingredients-div">
+ 
+    <textarea type="text" name="ingredients" id="ingredients" value="<%=item.ingredients%>"></textarea>
+</div>
+
+<label for="recepie" class="editLabel">Recepie:</label>
+<div id="edit-recepie-div">
+   
+    <textarea type="text" name="recepie" id="recepie" value="<%=item.recepie%>"></textarea>
+  </div>
 
 
-    <label for="ingredients">Ingredients:</label>
-    <textarea type="text" name="ingredients" id="ingredients" style="height: 4rem; width: 15rem; margin-top: 1em;" value="<%=item.ingredients%>"></textarea>
-<br>
+  <label for="image" class="editLabel">Image:</label>
+<div id="edit-images-div">  
+    <!-- <textarea type="text" name="image" id="image"value="<%=item.image%>"></textarea> -->
 
+    <form action="/" method="POST" enctype="multipart/form-data">
 
-
-
-
-    <label for="recepie">Recepie:</label>
-    <textarea type="text" name="recepie" id="recepie" style="margin-top: 1em;" value="<%=item.recepie%>"></textarea>
-<br>
-
-
-
-
-
-    <label for="image">Image:</label>
-    <textarea type="text" name="image" id="image"  style="height: 4rem; width: 15rem; margin-top: 1em;" value="<%=item.image%>"></textarea>
-<br>
-
-
-    <input type="submit" value="Submit the Edit" style="margin-top: 1em;" />
+      <div class="form-group">
+          <label for="Select Image:">Select Image:</label>
+          <input type="file" name="image" class="form-control" id="">
+      </div>
+      <br>
+      <div class="form-group">
+          <button class="btn btn-block btn-danger">
+              Upload Image
+          </button>
+      </div>
   </form>
+
+</div>
+
+    <input type="submit" value="Submit the Edit" />
+  </form>
+  <!-- {{#if success}}
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <strong>Success!</strong> Your Image File is Uploaded.
+        </div>
+        {{/if}} -->
 </div>

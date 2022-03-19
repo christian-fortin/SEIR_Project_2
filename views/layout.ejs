@@ -8,7 +8,9 @@
     <link type="text/css" rel="stylesheet" href="/css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Raleway&family=Roboto+Mono&display=swap" rel="stylesheet">
     <title>MyFoodBlog</title>
 </head>
 <body>
@@ -18,7 +20,9 @@
         <div class="title"><a href="###"></a>MyFoodBlog</div>
         <div class="navBar-items">
             <a href="/meal" class="nav-item">Home</a>
-            <a href="/meal/new" class="nav-item">Create a New Item</a>
+            <a href="/meal/new" class="nav-item createANewItem">Create a New Item</a>
+            <a href="/meal/new" class="nav-item create">Create</a>
+
             <% if(!loggedIn) { %>
             <a href="/sessions/login" class="nav-item">Login</a>
             <a href="/sessions/register" class="nav-item">Register</a>
