@@ -72,14 +72,15 @@ cursor: pointer;
 
 
 
-.create{
-  display: none;
+@media screen and (min-width: 1400px) {
+  .create{
+    display: none;
+  }
+ 
 }
-
 
 @media screen and (max-width: 1400px) {
   .create{
-    display: contents;
     align-items: center;
     font-size: 20px;
     color: white;
@@ -88,15 +89,15 @@ cursor: pointer;
     font-family: 'Roboto Mono', monospace;
     text-decoration: none;
   }
-  .create:hover{
-    background-color: grey;
-  }
   .createANewItem{
     display: none;
   }
 
  
 }
+/* .create:hover{
+  background-color: grey;
+} */
 
   /*//
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -224,7 +225,6 @@ border: none;
 font-family: 'Roboto Mono', monospace;
 color: grey;
 text-decoration: grey underline 2.5px;
-margin: 0 0 0 1rem;
 }
 
 .delete-input{
@@ -233,7 +233,6 @@ margin: 0 0 0 1rem;
   font-family: 'Roboto Mono', monospace;
   color: grey;
   text-decoration: grey underline 2.5px;
-  margin: 0 0 0 1rem;
   font-size: 20px;
   /* color: blue; */
 }
@@ -300,8 +299,41 @@ margin: 0 0 0 1rem;
   text-decoration: grey underline 2.5px;
 }
 
+textarea{
+  color: grey;
+}
+
 
 /*//
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
 
+
+/* //SHOW CARD
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////*/
+
+.show-div-container{
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 10rem 0 10rem;
+}
+
+.item-show{
+  margin: 0 0 2rem 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: grey;
+}
+
+#item-show-Dish{
+  margin: 0 0 2rem 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: grey;
+}
+
+span {
+  font-size: larger;
+  color: black;
+}

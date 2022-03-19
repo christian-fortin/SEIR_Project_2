@@ -1,10 +1,22 @@
 
 
-<div>
-  <p>Dish: <%= item.dish %></p>
-  <p>Ingredients: <%= item.ingredients %></p>
-  <p>Recepie: <%= item.recepie %></p>
-  <p>Image: <%= item.image %></p>
+<div class="show-div-container">
+  <p id="item-show-Dish"><span>Dish:</span> <%= item.dish %></p>
+  <p class="item-show"><span>Ingredients: </span><%= item.ingredients %></p>
+  
+  <p class="item-show"><span>Recepie:</span> <%= item.recepie %></p>
+  <p class="item-show"><span>Image:</span> <img src="<%= item.image %>"></p>
 </div>
-<a href="/meal">HOME</a>
+
+<div class="edit-and-delete">
+  <a  class="delete-input"href="/meal">HOME</a>
+  <div class="delete-button">
+      <form class="delete-button-text" action="/meal/<%= item.id %>?_method=DELETE" method="POST">
+          <input  class="delete-input" type="submit" value="DELETE ENTRY" />
+      </form>
+  </div>
+  <div id="edit-div">
+      <a href="/meal/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
+  </div>
+</div>
 

@@ -66,10 +66,20 @@ router.put("/meal/:id", (req, res) => {
     req.body,
     { new: true },
     (err, updatedModel) => {
-      console.log(updatedModel);
+      console.log('',updatedModel);
       res.render("show", { item: updatedModel });
     }
   );
+  upload(req, res, function (err) {
+    if (err) {
+      console.log(err);
+      return res.end("Something went wrong");
+    } else {
+      console.log('filepath name',req.file.path);
+      let imageName = req.file.filename;
+            res.render('home',{success : true})
+    }
+  });
 });
 
 router.get("/meal/:id/edit", (req, res) => {
@@ -105,10 +115,9 @@ router.post("/", (req, res) => {
       console.log(err);
       return res.end("Something went wrong");
     } else {
-      console.log(req.file.path);
+      console.log('filepath name',req.file.path);
       let imageName = req.file.filename;
-            res.render('home',{success:true})
-     
+            res.render('home',{success : true})
     }
   });
 });

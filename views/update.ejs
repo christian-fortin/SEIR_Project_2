@@ -5,25 +5,23 @@
 </div>
 
 
-  <form action="/meal/<%= item.id %>?_method=PUT" method="POST" class="form-edit_container">
+<form action="/meal/<%= item.id %>?_method=PUT" method="POST" class="form-edit_container">
     <label for="dish" class="editLabel">Dish:</label>
 <div id="edit-title-div">
-    
-    <textarea type="text" name="dish" id="dish" value="<%=item.dish%>"></textarea>
+    <textarea type="text" name="dish" id="dish"><%=item.dish%></textarea>
 </div>
 
 
 
 <label for="ingredients" class="editLabel">Ingredients:</label>
 <div id="edit-ingredients-div">
- 
-    <textarea type="text" name="ingredients" id="ingredients" value="<%=item.ingredients%>"></textarea>
+    <textarea type="text" name="ingredients" id="ingredients" ><%=item.ingredients%></textarea>
 </div>
 
 <label for="recepie" class="editLabel">Recepie:</label>
 <div id="edit-recepie-div">
    
-    <textarea type="text" name="recepie" id="recepie" value="<%=item.recepie%>"></textarea>
+    <textarea type="text" name="recepie" id="recepie"><%=item.recepie%></textarea>
   </div>
 
 
@@ -31,10 +29,9 @@
 <div id="edit-images-div">  
     <!-- <textarea type="text" name="image" id="image"value="<%=item.image%>"></textarea> -->
 
-    <form action="/" method="POST" enctype="multipart/form-data">
-
+  <form action="/" method="POST" enctype="multipart/form-data">
       <div class="form-group">
-          <label for="Select Image:">Select Image:</label>
+          <label for="Select Image:">Upload Image:</label>
           <input type="file" name="image" class="form-control" id="">
       </div>
       <br>

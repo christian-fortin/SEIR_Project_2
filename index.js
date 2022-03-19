@@ -33,20 +33,20 @@ app.use(methodOverride('_method'));
 
 
 
-const multer = require("multer");
+// const multer = require("multer");
 
-let Storage = multer.diskStorage({
-  destination: function (req, file, callback) {
-    callback(null, "./public/images");
-  },
-  filename: function (req, file, callback) {
-    callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
-  },
-});
+// let Storage = multer.diskStorage({
+//   destination: function (req, file, callback) {
+//     callback(null, "./public/images");
+//   },
+//   filename: function (req, file, callback) {
+//     callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
+//   },
+// });
 
-let upload = multer({
-  storage: Storage,
-}).single("image"); //Field name and max count
+// let upload = multer({
+//   storage: Storage,
+// }).single("image"); //Field name and max count
 
 
 const routeHit = (req,res,next) =>{
