@@ -54,7 +54,7 @@ const routeHit = (req,res,next) =>{
     next()
 }
 app.use(routeHit)
-
+// Just tells us when we change between routes for development purposes
 app.use(express.urlencoded({extended:false}));
 
 
@@ -97,4 +97,6 @@ app.use('/sessions', sessionController)
 // app.get('/getSessionInfo', (req, res) => {
 //     res.send(req.session.data)
 // })
+
+// Listening port and initiating server
 app.listen(app.get('port'), ()=> console.log(`Port: ${app.get('port')}`))

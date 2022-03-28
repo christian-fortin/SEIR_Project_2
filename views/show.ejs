@@ -1,22 +1,27 @@
 
+  <% if (item) {%>
+    <div class="edit-and-delete">
+     
+      <div class="delete-button">
+          <form class="delete-button-text" action="/meal/<%= item.id %>?_method=DELETE" method="POST">
+              <input  class="delete-input" type="submit" value="DELETE ENTRY" />
+          </form>
+      </div>
+      <div class="home-ref">
+        <a  class="home-ref"href="/meal">HOME</a>
+      </div>
+      <div id="edit-div">
+          <a href="/meal/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
+      </div>
+    </div>
+<div class="show-div-container"> 
 
-<div class="show-div-container">
-  <p id="item-show-Dish"><span>Dish:</span> <%= item.dish %></p>
+  <p id="item-show-Dish"><span>Dish:</span> <%=item.dish%></p>
+
   <p class="item-show"><span>Ingredients: </span><%= item.ingredients %></p>
   
   <p class="item-show"><span>Recepie:</span> <%= item.recepie %></p>
-  <p class="item-show"><span>Image:</span> <img src="<%= item.image %>"></p>
+  <div class="item-show img-show-div"><span></span> <br/><img class="image-show" src="/meal/<%= item.id %>/image"></div>
 </div>
 
-<div class="edit-and-delete">
-  <a  class="delete-input"href="/meal">HOME</a>
-  <div class="delete-button">
-      <form class="delete-button-text" action="/meal/<%= item.id %>?_method=DELETE" method="POST">
-          <input  class="delete-input" type="submit" value="DELETE ENTRY" />
-      </form>
-  </div>
-  <div id="edit-div">
-      <a href="/meal/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
-  </div>
-</div>
-
+<% } else {null} %>

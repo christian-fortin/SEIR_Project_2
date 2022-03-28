@@ -1,5 +1,6 @@
 <div class="itemsContainer" style="text-decoration: none;">
-    <% items.forEach( (item, index) =>{ console.log(item)  %>
+    <% items.forEach( (item, index) =>{  %>
+        <!-- creates this thing for each one of the defined items -->
 
         
             <div class="item-container">
@@ -35,19 +36,19 @@
                 <!-- <div id="image-div">
                     <p class="item" style="font-size: larger; font-weight: bold; color: black;">Image: </p>
                     <p class="item-below">
-                        <%= item.image %>
+                    
                     </p>
                 </div> -->
 
 
-                <div class="edit-and-delete">
-                    <div class="delete-button">
-                        <form class="delete-button-text" action="/meal/<%= item.id %>?_method=DELETE" method="POST">
+                <div class="edit-and-delete-index-container">
+                    <div class="delete-button-index">
+                        <form class="delete-button-text-index" action="/meal/<%= item.id %>?_method=DELETE" method="POST">
                             <input  class="delete-input" type="submit" value="DELETE ENTRY" />
                         </form>
                     </div>
-                    <div id="edit-div">
-                        <a href="/meal/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
+                    <div id="edit-div-index">
+                        <a href="/meal/<%= item.id %>/edit" class="edit-text-index">EDIT ENTRY</a>
                     </div>
 
                 </div>

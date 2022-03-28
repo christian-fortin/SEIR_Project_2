@@ -4,37 +4,56 @@
   </div>
 
   <div id="new-item-container">
-    <form action="/meal/new" method="POST">
-      <div id="new-title-div">
-        <label for="dish">Dish</label>
-        <input type="text" name="dish" id="dish" />
+    <form
+      id="new-item-container"
+      action="/meal/new"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <div class="new-item-field-div">
+        <label class="new-item-field-label" for="dish">Dish</label>
+        <textarea
+          class="new-item-textarea-dish"
+          type="text"
+          name="dish"
+          id="dish"
+        ></textarea>
       </div>
 
-      <br/>
-
-      <div>
-        <label for="ingredients">ingredients</label>
+      <div class="new-item-field-div">
+        <label class="new-item-field-label" for="ingredients"
+          >Ingredients</label
+        >
         <textarea
+          class="new-item-textarea"
           type="text"
           name="ingredients"
           id="ingredients"
-          style="height: 4rem; width: 15rem; margin-top: 1em"
+          
         ></textarea>
       </div>
-      <br/>
+      <div class="new-item-field-div">
+        <label class="new-item-field-label" for="recepie">Recepie</label>
+        <textarea
+          class="new-item-textarea"
+          type="text"
+          name="recepie"
+          id="recepie"
+          
+        ></textarea>
+      </div>
+      <div class="upload-new-img-div">
+        <!-- <textarea type="text" name="image" id="image"value=""></textarea> -->
 
-      <label for="recepie">Recepie</label>
-      <textarea
-        type="text"
-        name="recepie"
-        id="recepie"
-        style="height: 4rem; width: 15rem; margin-top: 1em"
-      ></textarea>
-
-      <br/>
-
-      <br />
-      <input type="submit" value="A New Item" style="margin-top: 1em" />
+        <div class="form-group">
+          <label class="new-item-field-label" for="Select Image:"
+            >Upload Image:</label>
+          <input class="upload-new-img-input" type="file" name="image" class="form-control" id="upload-new-img-input" />
+        </div>
+      </div>
+      <div>
+        <input id="create-item-input" type="submit" value="Create Item" />
+      </div>
     </form>
   </div>
 </body>

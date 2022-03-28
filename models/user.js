@@ -1,5 +1,5 @@
 const mongoose = require('../db/connection')
-
+// Schema for user creation
 const userSchema = new mongoose.Schema({
     username: 
     {type: String,

@@ -1,3 +1,4 @@
+// THis page is to just seed in the data
 const mongoose = require('./connection')
 const Meal = require('../models/meal')
 const mealSeeds = require('./seeds.json')

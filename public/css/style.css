@@ -198,6 +198,38 @@ cursor: pointer;
 .recepie-p:hover{
   color: black;
 }
+
+
+.edit-and-delete-index-container{
+ display: flex;
+ justify-content: center;
+ margin: 0 1rem 0 1rem;
+}
+
+.edit-text-index{
+  font-family: 'Roboto Mono', monospace;
+  color: grey;
+  text-decoration: grey underline 2.5px;
+  font-size: 20px;
+  margin: 0 1rem 0 1rem;
+}
+
+.edit-text-index:hover{
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: grey underline 2.5px;
+}
+.edit-text-div{
+
+}
+
+.delete-button-text-index{
+
+}
+
+.delete-button-index{
+
+}
 /* ///////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -211,13 +243,30 @@ cursor: pointer;
 .edit-and-delete{
   display: flex;
   padding: 2rem 0 0 0;
-  justify-content: center;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0 auto;
 }
 
 .delete-button{
   padding: 0;
   border: none;
   background: none;
+}
+
+.home-ref{
+  background-color: white;
+  border: none;
+  font-family: 'Roboto Mono', monospace;
+  color: grey;
+  text-decoration: grey underline 2.5px;
+  font-size: 20px;
+}
+
+.home-ref:hover{
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: grey underline 2.5px;
 }
 
 .delete-button-text{
@@ -247,7 +296,6 @@ text-decoration: grey underline 2.5px;
   font-family: 'Roboto Mono', monospace;
   color: grey;
   text-decoration: grey underline 2.5px;
-  margin: 0 0 0 1rem;
   font-size: 20px;
 }
 .edit-text:hover{
@@ -324,6 +372,7 @@ textarea{
   font-family: 'Roboto Mono', monospace;
   font-size: 20px;
   color: grey;
+  border: black solid underline;
 }
 
 #item-show-Dish{
@@ -336,4 +385,85 @@ textarea{
 span {
   font-size: larger;
   color: black;
+}
+
+.image-show{
+  height: 40rem;
+  width: 30rem;
+
+}
+
+.img-show-div{
+  display: flex;
+}
+
+
+
+/* //NEW ITEM PAGE
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#new-item-title{
+  display: flex;
+  justify-content: center;
+  color: grey;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: grey underline;
+  margin: 2rem 0 0 0;
+}
+
+#new-item-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-item-field-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0 2rem 0;
+}
+
+.new-item-field-label{
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: grey;
+  text-decoration: grey underline 2.5px;
+  margin: 0 0 1rem 0;
+}
+
+.new-item-textarea{
+  width: 30rem;
+  height: 10rem;
+}
+
+.new-item-textarea-dish{
+  width: 30rem;
+  height: 3rem;
+}
+
+.upload-new-img-input{
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 2rem;
+}
+
+#create-item-input{
+  width: 33rem;
+  height: 3rem;
+  margin: 3rem 0 3rem 0;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+}
+#create-item-input:hover{
+  width: 34rem;
+  height: 3.5rem;
+  font-family: 'Roboto Mono', monospace;
 }
