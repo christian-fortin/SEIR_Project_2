@@ -1,12 +1,14 @@
-<h1>Login</h1>
-<form action="/sessions/login" method="POST">
-    <fieldset>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+<div class="login-Container">
+<h1 class="login-Title">Login</h1>
+<form class="login-Form" action="/sessions/login" method="POST">
+    <fieldset class="fieldset-box">
+        <label class="LR-label" for="username">Username:</label>
+        <input class="LR-input" type="text" id="username" name="username">
     </fieldset>
-    <fieldset>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+    <fieldset class="fieldset-box">
+        <label class="LR-label" for="password">Password:</label>
+        <input class="LR-input" type="password" id="password" name="password">
     </fieldset>
-    <input type="submit" value="Log In">
+    <input  class="LR-submit-input" type="submit" value="Log In">
 </form>
+</div>
