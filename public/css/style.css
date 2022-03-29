@@ -1,5 +1,4 @@
-
-*{
+* {
   margin: 0;
   cursor: default;
 }
@@ -15,7 +14,7 @@ textarea {
 /*// TITLE AND NAV BAR
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
-.navMenu{
+.navMenu {
   display: flex;
   /* justify-content: flex-end; */
   align-items: center;
@@ -25,7 +24,7 @@ textarea {
   text-decoration: none;
 }
 
-.navBar-items{
+.navBar-items {
   margin-left: 4rem;
   display: flex;
   align-items: center;
@@ -33,7 +32,7 @@ textarea {
   height: 100%;
 }
 
-.nav-item{
+.nav-item {
   display: flex;
   align-items: center;
   font-size: 20px;
@@ -44,11 +43,11 @@ textarea {
   text-decoration: none;
 }
 
-.nav-item:hover{
+.nav-item:hover {
   background-color: grey;
 }
 
-.title{
+.title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -57,12 +56,12 @@ textarea {
   font-family: 'Roboto Mono', monospace;
   text-decoration: none;
 }
-.title:hover{
-color: yellow;
-cursor: pointer;
+.title:hover {
+  color: yellow;
+  cursor: pointer;
 }
 
-.nav-container{
+.nav-container {
   display: flex;
   align-items: center;
   margin-left: 3rem;
@@ -70,17 +69,14 @@ cursor: pointer;
   height: 100%;
 }
 
-
-
 @media screen and (min-width: 1400px) {
-  .create{
+  .create {
     display: none;
   }
- 
 }
 
 @media screen and (max-width: 1400px) {
-  .create{
+  .create {
     align-items: center;
     font-size: 20px;
     color: white;
@@ -89,41 +85,30 @@ cursor: pointer;
     font-family: 'Roboto Mono', monospace;
     text-decoration: none;
   }
-  .createANewItem{
+  .createANewItem {
     display: none;
   }
-
- 
 }
 /* .create:hover{
   background-color: grey;
 } */
 
-  /*//
+/*//
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
 
-
-
-
-
-
-
-
-
-
-  /*// ITEMS
+/*// ITEMS
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
 
-.itemsContainer{
+.itemsContainer {
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
   height: 100vh;
 }
 
-.item-container{
+.item-container {
   display: flex;
   height: 35rem;
   width: 25rem;
@@ -135,7 +120,7 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
-  .item-container{
+  .item-container {
     display: flex;
     height: 35rem;
     width: 25rem;
@@ -145,7 +130,7 @@ cursor: pointer;
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
   }
-  .itemsContainer{
+  .itemsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -158,55 +143,53 @@ cursor: pointer;
   border: 1px solid red;
 } */
 
-.dish-header{
+.dish-header {
   color: grey;
   font-family: 'Roboto Mono', monospace;
   text-decoration: grey underline;
 }
-.dish-header:hover{
+.dish-header:hover {
   color: black;
 }
 
-.ingredients-title{
-  padding: .5rem 0 0 0;
+.ingredients-title {
+  padding: 0.5rem 0 0 0;
   font-family: 'Roboto Mono', monospace;
   color: grey;
   text-decoration: grey underline 3px;
 }
 
-.link_to_items{
+.link_to_items {
   font-family: 'Roboto Mono', monospace;
   color: grey;
   text-decoration: none;
 }
-.link_to_items:hover{
+.link_to_items:hover {
   color: black;
 }
 
-
-.recepie-title{
-  padding: .5rem 0 0 0;
+.recepie-title {
+  padding: 0.5rem 0 0 0;
   font-family: 'Roboto Mono', monospace;
   color: grey;
   text-decoration: grey underline 3px;
 }
 
-.recepie-p{
+.recepie-p {
   font-family: 'Roboto Mono', monospace;
   color: grey;
 }
-.recepie-p:hover{
+.recepie-p:hover {
   color: black;
 }
 
-
-.edit-and-delete-index-container{
- display: flex;
- justify-content: center;
- margin: 0 1rem 0 1rem;
+.edit-and-delete-index-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 1rem 0 1rem;
 }
 
-.edit-text-index{
+.edit-text-index {
   font-family: 'Roboto Mono', monospace;
   color: grey;
   text-decoration: grey underline 2.5px;
@@ -214,33 +197,27 @@ cursor: pointer;
   margin: 0 1rem 0 1rem;
 }
 
-.edit-text-index:hover{
+.edit-text-index:hover {
   color: black;
   font-family: 'Roboto Mono', monospace;
   text-decoration: grey underline 2.5px;
 }
-.edit-text-div{
-
+.edit-text-div {
 }
 
-.delete-button-text-index{
-
+.delete-button-text-index {
 }
 
-.delete-button-index{
-
+.delete-button-index {
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////// */
-
-
-
 
 /*// EDIT AND DELETE BUTTONS ON SHOW PAGE
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
 
-.edit-and-delete{
+.edit-and-delete {
   display: flex;
   padding: 2rem 0 0 0;
   justify-content: space-between;
@@ -248,13 +225,13 @@ cursor: pointer;
   margin: 0 auto;
 }
 
-.delete-button{
+.delete-button {
   padding: 0;
   border: none;
   background: none;
 }
 
-.home-ref{
+.home-ref {
   background-color: white;
   border: none;
   font-family: 'Roboto Mono', monospace;
@@ -263,20 +240,20 @@ cursor: pointer;
   font-size: 20px;
 }
 
-.home-ref:hover{
+.home-ref:hover {
   color: black;
   font-family: 'Roboto Mono', monospace;
   text-decoration: grey underline 2.5px;
 }
 
-.delete-button-text{
-border: none;
-font-family: 'Roboto Mono', monospace;
-color: grey;
-text-decoration: grey underline 2.5px;
+.delete-button-text {
+  border: none;
+  font-family: 'Roboto Mono', monospace;
+  color: grey;
+  text-decoration: grey underline 2.5px;
 }
 
-.delete-input{
+.delete-input {
   background-color: white;
   border: none;
   font-family: 'Roboto Mono', monospace;
@@ -286,19 +263,19 @@ text-decoration: grey underline 2.5px;
   /* color: blue; */
 }
 
-.delete-input:hover{
+.delete-input:hover {
   color: black;
   font-family: 'Roboto Mono', monospace;
   text-decoration: grey underline 2.5px;
 }
 
-.edit-text{
+.edit-text {
   font-family: 'Roboto Mono', monospace;
   color: grey;
   text-decoration: grey underline 2.5px;
   font-size: 20px;
 }
-.edit-text:hover{
+.edit-text:hover {
   color: black;
   font-family: 'Roboto Mono', monospace;
   text-decoration: grey underline 2.5px;
@@ -307,17 +284,11 @@ text-decoration: grey underline 2.5px;
 /* ///////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////// */
 
-
-
-
-
 /* =================================== EDIT PAGE =================================== */
-
 
 /*// EDIT PAGE
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
-
 
 #edit-item-title {
   display: flex;
@@ -332,42 +303,40 @@ text-decoration: grey underline 2.5px;
   justify-content: center;
 }
 
-.form-edit_container{
+.form-edit_container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.editLabel{
-  margin: 2rem 0 .5rem 0;
+.editLabel {
+  margin: 2rem 0 0.5rem 0;
   font-family: 'Roboto Mono', monospace;
   font-size: 20px;
   color: grey;
   text-decoration: grey underline 2.5px;
 }
 
-textarea{
+textarea {
   color: grey;
 }
-
 
 /*//
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
 
-
 /* //SHOW CARD
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
 
-.show-div-container{
+.show-div-container {
   display: flex;
   flex-direction: column;
   margin: 3rem 10rem 0 10rem;
 }
 
-.item-show{
+.item-show {
   margin: 0 0 2rem 0;
   font-family: 'Roboto Mono', monospace;
   font-size: 20px;
@@ -375,7 +344,7 @@ textarea{
   border: black solid underline;
 }
 
-#item-show-Dish{
+#item-show-Dish {
   margin: 0 0 2rem 0;
   font-family: 'Roboto Mono', monospace;
   font-size: 20px;
@@ -387,24 +356,20 @@ span {
   color: black;
 }
 
-.image-show{
+.image-show {
   height: 40rem;
   width: 30rem;
-
 }
 
-.img-show-div{
+.img-show-div {
   display: flex;
 }
-
-
 
 /* //NEW ITEM PAGE
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
 
-
-#new-item-title{
+#new-item-title {
   display: flex;
   justify-content: center;
   color: grey;
@@ -413,21 +378,21 @@ span {
   margin: 2rem 0 0 0;
 }
 
-#new-item-container{
+#new-item-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.new-item-field-div{
+.new-item-field-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 2rem 0 2rem 0;
 }
 
-.new-item-field-label{
+.new-item-field-label {
   display: flex;
   justify-content: center;
   font-family: 'Roboto Mono', monospace;
@@ -437,23 +402,23 @@ span {
   margin: 0 0 1rem 0;
 }
 
-.new-item-textarea{
+.new-item-textarea {
   width: 30rem;
   height: 10rem;
 }
 
-.new-item-textarea-dish{
+.new-item-textarea-dish {
   width: 30rem;
   height: 3rem;
 }
 
-.upload-new-img-input{
+.upload-new-img-input {
   display: flex;
   justify-content: center;
   margin: 0 0 0 2rem;
 }
 
-#create-item-input{
+#create-item-input {
   width: 33rem;
   height: 3rem;
   margin: 3rem 0 3rem 0;
@@ -462,38 +427,43 @@ span {
   color: white;
   font-family: 'Roboto Mono', monospace;
 }
-#create-item-input:hover{
+#create-item-input:hover {
   width: 34rem;
   height: 3.5rem;
   font-family: 'Roboto Mono', monospace;
 }
 
-
-
 /*// LOGIN AND REGISTER PAGES
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
-.login-Container{
-
+.login-Container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
 }
-.login-Title{
+.login-Title {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: grey;
   font-family: 'Roboto Mono', monospace;
   text-decoration: grey underline;
-  margin: 2rem 50% 0 50%;
+  margin: 0 auto;
+  width: 30%;
 }
 
-.LR-input{
+.LR-input {
+  display: flex;
   width: 33rem;
   height: 3rem;
   border-radius: 10px;
   color: grey;
   font-size: 20px;
+  justify-content: center;
 }
 
-.LR-label{
+.LR-label {
   display: flex;
   justify-content: center;
   font-family: 'Roboto Mono', monospace;
@@ -503,24 +473,26 @@ span {
   margin: 2rem 0 1rem 0;
 }
 
-.login-Form{
+.login-Form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width:30%;
+  width: 30%;
   margin: 0 auto;
+  align-items: center;
 }
 
-.fieldset-box{
+.fieldset-box {
   display: flex;
   justify-content: center;
   flex-direction: column;
   border: none;
   width: 36rem;
-
 }
 
-.LR-submit-input{
+.LR-submit-input {
+  display: flex;
+  justify-content: center;
   width: 35rem;
   height: 3rem;
   margin: 3rem 0 3rem 0;
@@ -529,10 +501,19 @@ span {
   color: white;
   font-family: 'Roboto Mono', monospace;
   border-radius: 10px;
+  align-items: center;
 }
 
-.LR-submit-input:hover{
+.LR-submit-input:hover {
   width: 35rem;
   height: 3.5rem;
   font-family: 'Roboto Mono', monospace;
+}
+
+.input-Div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: none;
+  width: 38rem;
 }
