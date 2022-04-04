@@ -9,26 +9,8 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 
-// MULTER FOR IMAGE UPLOAD
-// let Storage = multer.diskStorage({
-//   destination: function (req, file, callback) {
-//     console.log('THIS RAN 2.0')
-//     callback(null, "./public/");
-//     console.log('THIS RAN');
-//   },
-//   filename: function (req, file, callback) {
-//     console.log('THIS RAN ALSO');
-//     callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
-//   },
-// });
-
-// let upload = multer({
-//   storage: Storage,
-// }).single("image"); //Field name and max count
-
-
 // SHOW PAGE FOR THE FEED
-router.get("/meal", (req, res) => {
+router.get("/", (req, res) => {
   Meal.find({}, (err, items) => {
     res.render("index", { 
       items: items, 
@@ -108,27 +90,5 @@ router.get("/meal/:id/image", (req, res) => {
   });
 });
 
-
-// FOR UPLOADING AN IMAGE
-// router.post("/", (req, res) => {
- 
-//       var imageDetails = new imageModel({
-//         image: {
-//           data: req.file.buffer,
-//           contentType: req.file.mimetype
-//         },
-//       });
-
-//       imageDetails.save(function (err, doc) {
-//         if (err) throw err;
-//         console.log("Image Saved");
-//         imageData.exec(function(err,data){
-//             if(err) throw err;
-//             res.render('home',{records:data,success:true})
-//         })
-//       });
-//     }
-//   });
-// });
 
 module.exports = router;

@@ -22,31 +22,11 @@ const session = require('express-session')
 app.use(expressEjsLayout)
 app.set('view engine', 'ejs')
 
-// const exphbs = require("express-handlebars");
-// app.engine("handlebars", exphbs.engine());
-// app.set("view engine", "handlebars");
 
 
 app.use(express.static('public/'))
 app.use(methodOverride('_method'));
 
-
-
-
-// const multer = require("multer");
-
-// let Storage = multer.diskStorage({
-//   destination: function (req, file, callback) {
-//     callback(null, "./public/images");
-//   },
-//   filename: function (req, file, callback) {
-//     callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
-//   },
-// });
-
-// let upload = multer({
-//   storage: Storage,
-// }).single("image"); //Field name and max count
 
 
 const routeHit = (req,res,next) =>{
@@ -71,15 +51,15 @@ app.use((req, res, next) => {
     next()
 })
 
-// const authRequired = (req, res, next) => {
-//     if (req.session.loggedIn) {
-//         // if the user is logged in, resolve the route
-//         next()
-//     } else {
-//         // otherwise redirect them to the log in page
-//         res.redirect('/session/login')
-//     }
-// }
+const authRequired = (req, res, next) => {
+    if (req.session.loggedIn) {
+        // if the user is logged in, resolve the route
+        next()
+    } else {
+        // otherwise redirect them to the log in page
+        res.redirect('/session/login')
+    }
+}
 
 
 
@@ -88,15 +68,16 @@ app.use((req, res, next) => {
 app.use('/', mealController)
 app.use('/sessions', sessionController)
 
-// app.get('/setCookie/:data', (req, res) => {
-//     req.session.data= req.params.data
-//     res.send('session data set')
-// })
+app.get('/setCookie/:data', (req, res) => {
+    req.session.data= req.params.data
+    res.send('session data set')
+})
 
 
-// app.get('/getSessionInfo', (req, res) => {
-//     res.send(req.session.data)
-// })
+app.get('/getSessionInfo', (req, res) => {
+    res.send(req.session.data)
+})
+
 
 // Listening port and initiating server
 app.listen(app.get('port'), ()=> console.log(`Port: ${app.get('port')}`))
