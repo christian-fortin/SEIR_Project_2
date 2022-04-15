@@ -33,7 +33,7 @@
     <a href="https://github.com/christian-fortin/SEIR_Project_2"><strong>Explore the docs</strong></a>
     <br />
     <br />
-    <a href="https://my-food-blog-410.herokuapp.com/">View Demo</a>
+    <a href="https://my-food-blog-410.herokuapp.com/sessions/register">View Demo</a>
     ·
     <a href="https://github.com/christian-fortin/SEIR_Project_2/issues">Report Bug</a>
     ·
