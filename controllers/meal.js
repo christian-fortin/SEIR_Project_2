@@ -9,10 +9,22 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 
+// you can also have middleware inside of a specific controller
+const authRequired = (req, res, next) => {
+  if (req.session.loggedIn) {
+      // if the user is logged in, resolve the route
+      next()
+  } else {
+      // otherwise redirect them to the log in page
+      res.redirect('/session/login')
+      
+  }
+}
+
 // SHOW PAGE FOR THE FEED
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   Meal.find({}, (err, items) => {
-    res.render("index", { 
+    res.render('index', { 
       items: items, 
       // Finds all the "meal's" that fit the model and places them on the index page
     /*username: req.session.username */});
@@ -20,13 +32,13 @@ router.get("/", (req, res) => {
 });
 
 // SHOW PAGE FOR CREATING A NEW ITEM
-router.get('/meal/new', (req, res) => {
+router.get('/new', authRequired, (req, res) => {
   res.render('new');
 });
 
 
 //SHOW PAGE SINGULAR
-router.get("/meal/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   Meal.findById(req.params.id, (err, item) => {
     res.render("show", { item: item });
   });
@@ -39,7 +51,7 @@ router.get("/meal/:id", (req, res) => {
 // });
 
 // SEND DATA TO CREATE THE NEW ITEM FROM THE FORM DATA
-router.post("/meal/new",  upload.single('image'), (req, res,) => {
+router.post("/new",  upload.single('image'), (req, res,) => {
  
   Meal.create({
     dish: req.body.dish,
@@ -57,14 +69,14 @@ router.post("/meal/new",  upload.single('image'), (req, res,) => {
 });
 
 // SEND DATA TO DELETE AN ENTRY BY THE ID
-router.delete("/meal/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   Meal.findByIdAndRemove(req.params.id, (err, deletedItem) => {
     res.redirect("/");
   });
 });
 
 // SEND DATA TO UPDATE THE ID
-router.put("/meal/:id", (req, res) => {
+router.put("/:id", (req, res) => {
   Meal.findByIdAndUpdate(
     req.params.id,
     req.body,
@@ -77,14 +89,14 @@ router.put("/meal/:id", (req, res) => {
 });
 
 //THE ROUTER.GET FOR EDIT 
-router.get("/meal/:id/edit", (req, res) => {
+router.get("/:id/edit", (req, res) => {
   Meal.findById(req.params.id, (err, item) => {
     res.render("update", { item: item });
   });
 });
 
 
-router.get("/meal/:id/image", (req, res) => {
+router.get("/:id/image", (req, res) => {
   Meal.findById(req.params.id, (err, item) => {
     res.send(item.image.data);
   });

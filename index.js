@@ -41,16 +41,31 @@ app.use(express.urlencoded({extended:false}));
 // Session middleware
 app.use(session({
     secret: SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
+    resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
+    saveUninitialized: false, // default  more info: https://www.npmjs.com/package/express-session#resave
 }))
 
 app.use((req, res, next) => {
     res.locals.username = req.session.username
     res.locals.loggedIn = req.session.loggedIn
+     // res.locals is the equivalent of the object that you pass to res.render
+    // this means that in all views, req.session.username will be available
+    // as the local variable username
     next()
 })
 
+app.use((req, res, next) => {
+    res.locals.message = req.session.message
+    // we're setting the session message as a local variable on all routes
+    req.session.message = ""
+    // after each request, we're going to reset the message to a blank string
+    next()
+})
+
+// middleware to require authentication
+
+// pass this is in to any controller or route that you don't want to have accessible
+// to users who are not logged in
 const authRequired = (req, res, next) => {
     if (req.session.loggedIn) {
         // if the user is logged in, resolve the route
@@ -58,6 +73,7 @@ const authRequired = (req, res, next) => {
     } else {
         // otherwise redirect them to the log in page
         res.redirect('/session/login')
+        
     }
 }
 
@@ -65,7 +81,7 @@ const authRequired = (req, res, next) => {
 
 
 // setting up controller
-app.use('/', mealController)
+app.use('/meal', authRequired, mealController)
 app.use('/sessions', sessionController)
 
 app.get('/setCookie/:data', (req, res) => {

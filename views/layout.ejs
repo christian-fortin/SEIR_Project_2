@@ -17,9 +17,15 @@
 
     <nav class="navMenu">
         <div class="nav-container">
-        <div class="title"><a href="/"></a>MyFoodBlog</div>
+            <% if (username) { %>
+                <div class="title"><a href="/meal"></a><%= username %>FoodBlog</div>
+                <!-- <p class="welcoming">Welcome, <%= username %> </p> -->
+                <% } else {%>
+                    <div class="title"><a href="/meal"></a>MyFoodBlog</div>
+                    <% } %>
+        <!-- <div class="title"><a href="/meal"></a>MyFoodBlog</div> -->
         <div class="navBar-items">
-            <a href="/" class="nav-item">Home</a>
+            <a href="/meal" class="nav-item">Home</a>
             
 
             <% if(!loggedIn) { %>
@@ -32,12 +38,13 @@
             <a href="/meal/new" class="nav-item create">Create</a>
             <a href="/sessions/logout" class="nav-item">Logout</a>
             <% } %>
-    <% if (username) { %>
-    <p>Welcome, <%= username %> </p>
-    <% } %>
+
+            
+   
     </div>
 </div>
     </nav>
+    
     <%-body%>
 </body>
 </html>

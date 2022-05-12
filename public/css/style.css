@@ -14,6 +14,9 @@ textarea {
 /*// TITLE AND NAV BAR
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
+.welcoming{
+color: white;
+}
 .navMenu {
   display: flex;
   /* justify-content: flex-end; */
@@ -322,6 +325,13 @@ textarea {
   color: grey;
 }
 
+.submit-edit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin: .5rem 0 0 0 ;
+}
+
 /*//
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////*/
@@ -399,7 +409,16 @@ span {
   font-size: 20px;
   color: grey;
   text-decoration: grey underline 2.5px;
-  margin: 0 0 1rem 0;
+  margin: 0 0 .5rem 0;
+}
+
+.new-item-field-label-under{
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  color: grey;
+  margin: 0 0 .5rem 0;
 }
 
 .new-item-textarea {
