@@ -64,14 +64,14 @@ router.post("/new",  upload.single('image'), (req, res,) => {
       // This says what kind of file it is
     },
   }, (err, createditem) => {
-    res.redirect("/");
+    res.redirect("/meal");
   });
 });
 
 // SEND DATA TO DELETE AN ENTRY BY THE ID
 router.delete("/:id", (req, res) => {
   Meal.findByIdAndRemove(req.params.id, (err, deletedItem) => {
-    res.redirect("/");
+    res.redirect("/meal");
   });
 });
 

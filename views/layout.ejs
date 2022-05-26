@@ -17,13 +17,7 @@
 
     <nav class="navMenu">
         <div class="nav-container">
-            <% if (username) { %>
-                <div class="title"><a href="/meal"></a><%= username %>FoodBlog</div>
-                <!-- <p class="welcoming">Welcome, <%= username %> </p> -->
-                <% } else {%>
-                    <div class="title"><a href="/meal"></a>MyFoodBlog</div>
-                    <% } %>
-        <!-- <div class="title"><a href="/meal"></a>MyFoodBlog</div> -->
+        <div class="title"><a href="/"></a>MyFoodBlog</div>
         <div class="navBar-items">
             <a href="/meal" class="nav-item">Home</a>
             
@@ -31,20 +25,19 @@
             <% if(!loggedIn) { %>
             <a href="/sessions/login" class="nav-item">Login</a>
             <a href="/sessions/register" class="nav-item">Register</a>
-
+            
             <% } else { %>
             
             <a href="/meal/new" class="nav-item createANewItem">Create a New Item</a>
             <a href="/meal/new" class="nav-item create">Create</a>
             <a href="/sessions/logout" class="nav-item">Logout</a>
             <% } %>
-
-            
-   
+    <% if (username) { %>
+    <p>Welcome, <%= username %> </p>
+    <% } %>
     </div>
 </div>
     </nav>
-    
     <%-body%>
 </body>
 </html>

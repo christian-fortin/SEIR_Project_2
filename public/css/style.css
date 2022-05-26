@@ -116,7 +116,7 @@ color: white;
   height: 35rem;
   width: 25rem;
   padding: 0 1rem 1rem 1rem;
-  margin: 0 2rem 0 2rem;
+  margin: 1rem 2rem 1rem 2rem;
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px 5px black;
@@ -127,7 +127,7 @@ color: white;
     display: flex;
     height: 35rem;
     width: 25rem;
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     margin: 4rem 2rem 0 2rem;
     border: 2px solid black;
     border-radius: 10px;
@@ -313,6 +313,10 @@ color: white;
   align-items: center;
 }
 
+.form-control{
+
+}
+
 .editLabel {
   margin: 2rem 0 0.5rem 0;
   font-family: 'Roboto Mono', monospace;
@@ -440,7 +444,7 @@ span {
 #create-item-input {
   width: 33rem;
   height: 3rem;
-  margin: 3rem 0 3rem 0;
+  margin: 1rem 0 3rem 0;
   font-size: 20px;
   background-color: black;
   color: white;
