@@ -22,19 +22,20 @@
             <a href="/meal" class="nav-item">Home</a>
             
 
-            <% if(!loggedIn) { %>
+            <%/* if(!loggedIn) { */%>
             <a href="/sessions/login" class="nav-item">Login</a>
             <a href="/sessions/register" class="nav-item">Register</a>
             
-            <% } else { %>
+            <%/* } else { */%>
+            <a href="/sessions/register" class="nav-item">||</a>
             
             <a href="/meal/new" class="nav-item createANewItem">Create a New Item</a>
             <a href="/meal/new" class="nav-item create">Create</a>
             <a href="/sessions/logout" class="nav-item">Logout</a>
-            <% } %>
-    <% if (username) { %>
-    <p>Welcome, <%= username %> </p>
-    <% } %>
+            <%/* } */%>
+    <%/* if (username) { */%> 
+    <p>Welcome, <%=/* username */%> </p>
+    <%/* } */%>
     </div>
 </div>
     </nav>

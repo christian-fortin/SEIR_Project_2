@@ -65,17 +65,17 @@ app.use((req, res, next) => {
 
 // pass this is in to any controller or route that you don't want to have accessible
 // to users who are not logged in
-const authRequired = (req, res, next) => {
-    if (req.session.loggedIn) {
-        // if the user is logged in, resolve the route
-        next()
-    } else {
-        // otherwise redirect them to the log in page
-        // console.log('This was hit');
-        res.redirect('/sessions/login')
+// const authRequired = (req, res, next) => {
+//     if (req.session.loggedIn) {
+//         // if the user is logged in, resolve the route
+//         next()
+//     } else {
+//         // otherwise redirect them to the log in page
+//         // console.log('This was hit');
+//         res.redirect('/sessions/login')
         
-    }
-}
+//     }
+// }
 
 
 
