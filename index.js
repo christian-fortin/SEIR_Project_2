@@ -72,7 +72,8 @@ const authRequired = (req, res, next) => {
         next()
     } else {
         // otherwise redirect them to the log in page
-        res.redirect('/session/login')
+        // console.log('This was hit');
+        res.redirect('/sessions/login')
         
     }
 }
