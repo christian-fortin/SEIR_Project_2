@@ -3,15 +3,15 @@
     <div class="edit-and-delete">
      
       <div class="delete-button">
-          <form class="delete-button-text" action="/meal/<%= item.id %>?_method=DELETE" method="POST">
+          <form class="delete-button-text" action="/<%= item.id %>?_method=DELETE" method="POST">
               <input  class="delete-input" type="submit" value="DELETE ENTRY" />
           </form>
       </div>
       <div class="home-ref">
-        <a  class="home-ref"href="/meal">HOME</a>
+        <a  class="home-ref"href="/">HOME</a>
       </div>
       <div id="edit-div">
-          <a href="/meal/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
+          <a href="/<%= item.id %>/edit" class="edit-text">EDIT ENTRY</a>
       </div>
     </div>
 <div class="show-div-container"> 
@@ -21,7 +21,7 @@
   <p class="item-show"><span>Ingredients: </span><%= item.ingredients %></p>
   
   <p class="item-show"><span>Recepie:</span> <%= item.recepie %></p>
-  <div class="item-show img-show-div"><span></span> <br/><img class="image-show" src="/meal/<%= item.id %>/image"></div>
+  <div class="item-show img-show-div"><span></span> <br/><img class="image-show" src="/<%= item.id %>/image"></div>
 </div>
 
 <% } else {null} %>

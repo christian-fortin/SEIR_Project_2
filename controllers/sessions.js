@@ -42,7 +42,7 @@ router.post('/register', async (req, res, next) => {
         const createdUser = await User.create(req.body)
         req.session.username = createdUser.username
         req.session.loggedIn = true
-        res.redirect("/meal");
+        res.redirect("/");
       }
     } else {
       // Checking for password match
@@ -76,7 +76,7 @@ router.post("/login", async (req, res, next) => {
       if (validPassword) {
         req.session.username = userToLogin.username;
         req.session.loggedIn = true;
-        res.redirect("/meal");
+        res.redirect("/");
       } else {
         res.redirect("/sessions/login");
         req.session.message = "Invalid username or password"

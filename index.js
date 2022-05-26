@@ -81,7 +81,7 @@ app.use((req, res, next) => {
 
 
 // setting up controller
-app.use('/meal', /*authRequired,*/ mealController)
+app.use('/', /*authRequired,*/ mealController)
 app.use('/sessions', sessionController)
 
 app.get('/setCookie/:data', (req, res) => {

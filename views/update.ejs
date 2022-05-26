@@ -5,7 +5,7 @@
 </div>
 
 
-<form action="/meal/<%= item.id %>?_method=PUT" method="POST" class="form-edit_container">
+<form action="/<%= item.id %>?_method=PUT" method="POST" class="form-edit_container">
     <label for="dish" class="editLabel">Dish:</label>
 <div id="edit-title-div">
     <textarea type="text" name="dish" id="dish"><%=item.dish%></textarea>

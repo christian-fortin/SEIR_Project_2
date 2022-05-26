@@ -6,7 +6,7 @@
             <div class="item-container">
             <div class="inner-item-container">
                 <div>
-                    <a href="/meal/<%= item.id %>" class="items-a-container">
+                    <a href="/<%= item.id %>" class="items-a-container">
                     <h1 class="dish-header">Dish:
                         <%= item.dish %>
                     </h1>
@@ -16,7 +16,7 @@
                     <h2 class="ingredients-title">Ingredients:</h2>
                     <a href=""></a>
                     <p class="ingredients-p">
-                        <a href="/meal/<%= item.id %>" class="link_to_items">
+                        <a href="/<%= item.id %>" class="link_to_items">
                         <%= item.ingredients %>
                     </p>
                 </a>
@@ -25,7 +25,7 @@
 
                 <div id="recepie-div">
                     <h2 class="recepie-title">Recepie:</h2>
-                    <a href="/meal/<%= item.id %>" class="link_to_items">
+                    <a href="/<%= item.id %>" class="link_to_items">
                     <p class="recepie-p">
                         <%= item.recepie %>
                     </p>
@@ -43,12 +43,12 @@
 
                 <div class="edit-and-delete-index-container">
                     <div class="delete-button-index">
-                        <form class="delete-button-text-index" action="/meal/<%= item.id %>?_method=DELETE" method="POST">
+                        <form class="delete-button-text-index" action="/<%= item.id %>?_method=DELETE" method="POST">
                             <input  class="delete-input" type="submit" value="DELETE ENTRY" />
                         </form>
                     </div>
                     <div id="edit-div-index">
-                        <a href="/meal/<%= item.id %>/edit" class="edit-text-index">EDIT ENTRY</a>
+                        <a href="/<%= item.id %>/edit" class="edit-text-index">EDIT ENTRY</a>
                     </div>
 
                 </div>
