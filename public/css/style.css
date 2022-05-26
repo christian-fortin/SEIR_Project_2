@@ -72,13 +72,13 @@ color: white;
   height: 100%;
 }
 
-@media screen and (min-width: 1400px) {
+/* @media screen and (min-width: 1400px) {
   .create {
     display: none;
   }
-}
+} */
 
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) { */
   .create {
     align-items: center;
     font-size: 20px;
@@ -88,10 +88,10 @@ color: white;
     font-family: 'Roboto Mono', monospace;
     text-decoration: none;
   }
-  .createANewItem {
+  /* .createANewItem {
     display: none;
-  }
-}
+  } */
+/* } */
 /* .create:hover{
   background-color: grey;
 } */
