@@ -10,16 +10,16 @@ const upload = multer({ storage: storage });
 
 
 // you can also have middleware inside of a specific controller
-const authRequired = (req, res, next) => {
-  if (req.session.loggedIn) {
-      // if the user is logged in, resolve the route
-      next()
-  } else {
-      // otherwise redirect them to the log in page
-      res.redirect('/session/login')
+// const authRequired = (req, res, next) => {
+//   if (req.session.loggedIn) {
+//       // if the user is logged in, resolve the route
+//       next()
+//   } else {
+//       // otherwise redirect them to the log in page
+//       res.redirect('/session/login')
       
-  }
-}
+//   }
+// }
 
 // SHOW PAGE FOR THE FEED
 router.get('/', (req, res) => {
@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
 });
 
 // SHOW PAGE FOR CREATING A NEW ITEM
-router.get('/new', authRequired, (req, res) => {
+router.get('/new', /*authRequired,*/ (req, res) => {
   res.render('new');
 });
 

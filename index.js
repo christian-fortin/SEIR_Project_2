@@ -81,7 +81,7 @@ const authRequired = (req, res, next) => {
 
 
 // setting up controller
-app.use('/meal', authRequired, mealController)
+app.use('/meal', /*authRequired,*/ mealController)
 app.use('/sessions', sessionController)
 
 app.get('/setCookie/:data', (req, res) => {
